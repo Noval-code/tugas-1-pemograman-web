@@ -4,6 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wisata Guci Tegal</title>
+
+    <style>
+      label{
+        display: block;
+        color: black;
+        font-size: 1.2rem;
+      }
+      input[type="email"]{
+        padding: 0.5rem 0.8rem;
+        width: 100%;
+        margin-block: 0.8rem;
+      }
+      input[type="submit"]{
+        padding: 0.5rem 1.4rem;
+        font-size: 1rem;
+        background-color: rgb(5, 173, 5);
+        color: white;
+        border-radius: 0.4rem;
+        border: none;
+      }
+    </style>
   </head>
   <body style="padding: 0; margin: 0">
     <header class="navbar-container" style="display: flex; align-items: center; justify-content: space-around; background-color: rgb(5, 173, 5); position: fixed; top: 0; left: 0; width: 100%; padding-block: 1rem;">
@@ -112,6 +133,17 @@
             <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per orang</td>
           </tr>
         </table>
+      </section>
+      <section class="news" id="news">
+        <h1 style="text-align: center; font-size: 3rem;color: rgb(5, 173, 5)"><i>Kontak</i></h1>
+        <h3 style="text-align: center; font-size: 2rem;color: rgb(5, 173, 5);">Untuk mendapatkan berita terbaru</h3>
+        <div class="form-container" style="display: flex;justify-content: center;background-color: aquamarine;padding: 2rem;">
+          <form >
+            <label for="email">Masukkan email</label>
+            <input type="email">
+            <input type="submit" value="kirim">
+          </form>
+        </div>
       </section>
     </main>
     <footer style="background-color: rgb(5, 173, 5); padding: 1.5rem 2%;margin-top: 2rem;">
