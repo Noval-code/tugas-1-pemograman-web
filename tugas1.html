@@ -9,6 +9,7 @@
       .form-container{
        display: flex;
        justify-content: center;
+       padding-bottom: 2rem;
       
       }
       label{
@@ -16,18 +17,30 @@
         color: black;
         font-size: 1.2rem;
       }
-      input[type="email"]{
+      input[type="email"],
+      input[type="text"],
+      input[type="number"],
+      input[type="password"],
+      select,
+      textarea{
         padding: 0.5rem 0.8rem;
         width: 100%;
         margin-block: 0.8rem;
+        font-size: 1rem;
+        color: black;
       }
       input[type="submit"]{
         padding: 0.5rem 1.4rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
         background-color: rgb(5, 173, 5);
         color: white;
         border-radius: 0.4rem;
         border: none;
+        margin-top: 1.7rem;
+        display: block;
+      }
+      textarea{
+        resize: none;
       }
     </style>
   </head>
@@ -119,24 +132,28 @@
         <h1 style="text-align: center;font-size: 3rem;color: rgb(5, 173, 5)"><i>Harga Tiket</i></h1>
         <table align="center">
           <tr>
-            <th style="border: 1px solid black; padding: 1.5rem; font-size: 1.6rem;">Wisata</th>
-            <th style="border: 1px solid black; padding: 1.5rem; font-size: 1.6rem;">Harga Tiket</th>
-            <th style="border: 1px solid black; padding: 1.5rem; font-size: 1.6rem;">Kuantitas</th>
+            <th style="border: 1px solid black; padding: 1.5rem; font-size: 1.6rem;" rowspan="2">Wisata</th>
+            <th style="border: 1px solid black; padding: 1.5rem; font-size: 1.6rem;" colspan="2">Harga Tiket</th>
           </tr>
           <tr>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Hot Guci Waterboom</td>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.40.000</td>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per orang</td>
+           
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per motor</td>
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per mobil</td>
+          </tr>
+          <tr>
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Pemandian Air Panas</td>
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.10.000</td>           
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.30.000</td>           
           </tr>
           <tr>
             <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Jembatan Kaca Baron Hill</td>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.10.000</td>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per orang</td>
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.10.000</td>           
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.30.000</td>           
           </tr>
           <tr>
             <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Pancuran 13</td>
             <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.4.000</td>
-            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">per orang</td>
+            <td style="border: 1px solid black; padding: 1rem; font-size: 1.2rem;">Rp.34.000</td>
           </tr>
         </table>
       </section>
@@ -145,8 +162,23 @@
         <h3 style="text-align: center; font-size: 2rem;color: rgb(5, 173, 5);">Untuk mendapatkan berita terbaru</h3>
         <div class="form-container">
           <form>
+            <label for="name">Masukkan Nama</label>
+            <input type="text" name="name" required>
             <label for="email">Masukkan email</label>
-            <input type="email">
+            <input type="email" name="email" required>
+            <label for="password">Masukkan Password</label>
+            <input type="password" name="password" required>
+            <label for="phone-number">Masukkan Nomor Telepon</label>
+            <input type="number" required>
+            <label for="rating">Beri kami nilai terkait dengan wisata ini :</label>
+            <select id="rating" name="rating">
+              <option value="volvo">Sangat puas</option>
+              <option value="saab">Puas</option>
+              <option value="mercedes">Tidak puas</option>
+              <option value="audi">Sangat tidak puas</option>
+            </select>
+            <label for="feedback">Beri Kami Masukkan</label>
+            <textarea rows="10" cols="80" ></textarea>
             <input type="submit" value="kirim">
           </form>
         </div>
